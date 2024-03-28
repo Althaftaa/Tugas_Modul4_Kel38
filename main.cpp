@@ -45,6 +45,41 @@ void beli_pensil(Pensil pensil) {
     int total_harga_setelah_diskon = total_harga - diskon;
     print_invoice(jumlah_pensil, total_harga_setelah_diskon);
 }
+int main() {
+    int pilihan;
+    while (true) {
+        print_menu();
+        cout << "Pilih jenis pensil yang ingin dibeli: ";
+        cin >> pilihan;
+        if (pilihan == 1) {
+            Pensil warna;
+            warna.jenis_pensil = "Pensil Warna";
+            warna.harga_pensil = 15000;
+            beli_pensil(warna);
+        } else if (pilihan == 2) {
+            Pensil gambar;
+            gambar.jenis_pensil = "Pensil Gambar";
+            gambar.harga_pensil = 100000;
+            beli_pensil(gambar);
+        } else if (pilihan == 3) {
+            Pensil mekanik;
+            mekanik.jenis_pensil = "Pensil Mekanik";
+            mekanik.harga_pensil = 50000;
+            beli_pensil(mekanik);
+        } else if (pilihan == 4) {
+            Pensil conte;
+            conte.jenis_pensil = "Pensil Conte";
+            conte.harga_pensil = 90000;
+            beli_pensil(conte);
+        } else if (pilihan == 5) {
+            cout << "Terima kasih telah menggunakan program ini!" << endl;
+            break;
+        } else {
+            cout << "Pilihan tidak valid, silakan coba lagi." << endl;
+        }
+    }
+    return 0;
+}
 
 
 
