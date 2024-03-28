@@ -24,4 +24,11 @@ void print_invoice(int jumlah_pensil, int total_harga) {
     cout << "Terima kasih telah berbelanja!" << endl;
     cout << "================================" << endl;
 }
+int hitung_diskon(int total_harga) {
+    int diskon = 0;
+    if (total_harga >= 500000) {
+        diskon = total_harga * 0.1;
+    }
+    return diskon;
+}
 
