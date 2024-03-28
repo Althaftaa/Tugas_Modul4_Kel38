@@ -31,4 +31,9 @@ int hitung_diskon(int total_harga) {
     }
     return diskon;
 }
+int hitung_total_harga(int harga_pensil, int jumlah_pensil) {
+    int total_harga = harga_pensil * jumlah_pensil;
+    return total_harga;
+}
+
 
