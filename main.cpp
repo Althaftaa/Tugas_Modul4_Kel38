@@ -35,5 +35,16 @@ int hitung_total_harga(int harga_pensil, int jumlah_pensil) {
     int total_harga = harga_pensil * jumlah_pensil;
     return total_harga;
 }
+void beli_pensil(Pensil pensil) {
+    int jumlah_pensil;
+    cout << "Harga " << pensil.jenis_pensil << ": Rp " << pensil.harga_pensil << endl;
+    cout << "Jumlah " << pensil.jenis_pensil << " yang ingin dibeli: ";
+    cin >> jumlah_pensil;
+    int total_harga = hitung_total_harga(pensil.harga_pensil, jumlah_pensil);
+    int diskon = hitung_diskon(total_harga);
+    int total_harga_setelah_diskon = total_harga - diskon;
+    print_invoice(jumlah_pensil, total_harga_setelah_diskon);
+}
+
 
 
