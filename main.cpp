@@ -15,3 +15,13 @@ void print_menu() {
     cout << "4. Pensil Conte" << endl;
     cout << "5. Keluar Program" << endl;
 }
+void print_invoice(int jumlah_pensil, int total_harga) {
+    cout << "================================" << endl;
+    cout << "         INVOICE                " << endl;
+    cout << "================================" << endl;
+    cout << "Jumlah pensil: " << jumlah_pensil << endl;
+    cout << "Total harga: Rp " << total_harga << endl;
+    cout << "Terima kasih telah berbelanja!" << endl;
+    cout << "================================" << endl;
+}
+
